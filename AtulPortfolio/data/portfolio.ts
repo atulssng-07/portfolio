@@ -40,6 +40,7 @@ export type Project = {
   description: string;
   highlights: string[];
   outcome: string;
+  link?: string;
 };
 
 export type Certification = {
@@ -176,7 +177,7 @@ export const experiences: ExperienceItem[] = [
   {
     title: "Data Analyst Intern",
     company: "Clique InfoTech Pvt. Ltd.",
-    period: "Internship",
+    period: "July 2025 - August 2025",
     type: "Internship",
     bullets: [
       "Collected, cleaned, and analyzed data from multiple sources.",
@@ -236,7 +237,26 @@ export const projects: Project[] = [
       "WebSocket live updates"
     ],
     outcome:
-      "Delivered a live monitoring flow for detecting, annotating, and broadcasting parking slot status."
+      "Delivered a live monitoring flow for detecting, annotating, and broadcasting parking slot status.",
+    link: "https://github.com/atulssng-07/PARKNEST-Smart-Parking-Management-System"
+  },
+  {
+    title: "Live Sales & CRM Performance Dashboard",
+    role: "ERP & CRM Executive",
+    category: "BI",
+    tech: ["ERPNext", "Frappe Framework", "REST API", "JavaScript", "Power BI"],
+    description:
+      "Built a real-time business dashboard on ERPNext/Frappe to track sales pipeline, revenue, and team performance for Dreamzcraft Infomatics, pulling live data through a custom API endpoint.",
+    highlights: [
+      "Custom Frappe API endpoint for live dashboard rendering",
+      "Sales funnel tracking: Lead to Quotation to Sales Order",
+      "Revenue overview and team performance monitoring",
+      "Planner compliance tracking",
+      "Real-time data refresh without manual reporting"
+    ],
+    outcome:
+      "Gave leadership real-time visibility into sales and CRM performance, reducing dependency on manual daily/weekly reports.",
+    link: "https://dreamzcraft.m.frappe.cloud/api/method/render_live_dashboard"
   }
 ];
 

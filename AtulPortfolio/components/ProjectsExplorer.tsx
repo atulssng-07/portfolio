@@ -116,8 +116,14 @@ export function ProjectsExplorer({ expanded = false }: ProjectsExplorerProps) {
                   </p>
                 </div>
                 <Link
-                  href="/projects"
-                  aria-label={`Open ${project.title} case study`}
+                  href={project.link ?? "/projects"}
+                  target={project.link ? "_blank" : undefined}
+                  rel={project.link ? "noreferrer" : undefined}
+                  aria-label={
+                    project.link
+                      ? `Open ${project.title} live dashboard`
+                      : `Open ${project.title} case study`
+                  }
                   className={cn(
                     "focus-ring flex h-10 w-10 shrink-0 items-center justify-center rounded-md border transition",
                     expanded
