@@ -101,12 +101,22 @@ export function Hero() {
         >
           <motion.div
             variants={tagReveal}
-            className="mb-6 inline-flex max-w-full min-w-0 items-center gap-2 rounded-md border border-white/12 bg-white/8 px-3 py-2 text-sm text-slate-200 backdrop-blur"
+            className="mb-6 flex items-center gap-4"
           >
-            <MapPin size={16} className="shrink-0 text-teal-signal" />
-            <span className="min-w-0 truncate">
-              {profile.location} | Preferred: Gurugram / Delhi NCR / Pan India
-            </span>
+            <Image
+              src="/profile.png"
+              alt={profile.name}
+              width={88}
+              height={88}
+              priority
+              className="h-20 w-20 shrink-0 rounded-full border-2 border-cyan-glow/60 object-cover shadow-[0_0_28px_rgba(34,211,238,0.35)] sm:h-[88px] sm:w-[88px]"
+            />
+            <div className="inline-flex max-w-full min-w-0 items-center gap-2 rounded-md border border-white/12 bg-white/8 px-3 py-2 text-sm text-slate-200 backdrop-blur">
+              <MapPin size={16} className="shrink-0 text-teal-signal" />
+              <span className="min-w-0 truncate">
+                {profile.location} | Preferred: Gurugram / Delhi NCR / Pan India
+              </span>
+            </div>
           </motion.div>
           <h1 className="text-4xl font-semibold leading-tight text-white sm:text-6xl lg:text-7xl">
             {profile.name}
