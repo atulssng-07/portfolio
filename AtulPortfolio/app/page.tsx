@@ -8,7 +8,6 @@ import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
 import { ProjectsExplorer } from "@/components/ProjectsExplorer";
 import { Skills } from "@/components/Skills";
-import { LearningRoadmap } from "@/components/LearningRoadmap";
 
 export default function Home() {
   return (
@@ -18,7 +17,6 @@ export default function Home() {
         <Hero />
         <About />
         <Skills />
-        <LearningRoadmap />
         <Experience />
         <ProjectsExplorer />
         <Education />

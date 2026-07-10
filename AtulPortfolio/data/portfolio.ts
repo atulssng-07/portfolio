@@ -14,106 +14,225 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
+export type SkillItem = {
+  name: string;
+  topics: string[];
+};
+
 export type SkillCategory = {
   title: string;
   icon: LucideIcon;
   summary: string;
-  skills: string[];
+  skills: SkillItem[];
 };
 
-
-//Learning Roadmap
-export type RoadmapTopic = {
-  tool: string;
-  icon: LucideIcon;
-  topics: string[];
-};
-export const learningRoadmap: RoadmapTopic[] = [
+export const skillCategories: SkillCategory[] = [
   {
-    tool: "SQL",
+    title: "Data Analysis",
     icon: Database,
-    topics: [
-      "SQL basics and query structure",
-      "Data life cycle and collection methods",
-      "SELECT, WHERE, ORDER BY, GROUP BY",
-      "Joins and aggregations",
-      "Microsoft SQL Server fundamentals",
-      "Writing queries for data extraction and reporting"
+    summary: "Raw data handling, exploratory analysis, and reporting logic.",
+    skills: [
+      {
+        name: "SQL",
+        topics: [
+          "SQL basics and query structure",
+          "Data life cycle and collection methods",
+          "SELECT, WHERE, ORDER BY, GROUP BY",
+          "Joins and aggregations",
+          "Microsoft SQL Server fundamentals",
+          "Writing queries for data extraction and reporting"
+        ]
+      },
+      {
+        name: "Excel",
+        topics: [
+          "Data cleaning and organizing",
+          "Formulas and functions for analysis",
+          "Reporting and summary tables",
+          "Data validation and structuring for analysis"
+        ]
+      },
+      {
+        name: "Python",
+        topics: [
+          "Core Python: variables, loops, functions",
+          "Scripting and automation basics",
+          "Data cleaning and transformation",
+          "Feature engineering for analysis and ML"
+        ]
+      },
+      {
+        name: "Pandas & NumPy",
+        topics: [
+          "Data extraction and transformation",
+          "Cleaning and structuring raw datasets",
+          "GroupBy operations and aggregations",
+          "Working with real-world messy data (Airbnb, stock market datasets)"
+        ]
+      },
+      {
+        name: "EDA",
+        topics: [
+          "Identifying trends, patterns, and business insights",
+          "Data cleaning and feature engineering",
+          "Data visualization for pattern discovery",
+          "Time-series analysis"
+        ]
+      },
+      {
+        name: "Data Cleaning",
+        topics: [
+          "Handling missing and inconsistent data",
+          "Standardizing formats across sources",
+          "Ensuring accuracy and consistency for reporting"
+        ]
+      }
     ]
   },
   {
-    tool: "Excel",
-    icon: FileSpreadsheet,
-    topics: [
-      "Data cleaning and organizing",
-      "Formulas and functions for analysis",
-      "Reporting and summary tables",
-      "Data validation and structuring for analysis"
-    ]
-  },
-  {
-    tool: "Python",
-    icon: BrainCircuit,
-    topics: [
-      "Core Python: variables, loops, functions",
-      "Scripting and automation basics",
-      "Data cleaning and transformation",
-      "Feature engineering for analysis and ML"
-    ]
-  },
-  {
-    tool: "Pandas & NumPy",
-    icon: Database,
-    topics: [
-      "Data extraction and transformation",
-      "Cleaning and structuring raw datasets",
-      "GroupBy operations and aggregations",
-      "Working with real-world messy data (Airbnb, stock market datasets)"
-    ]
-  },
-  {
-    tool: "Power BI & DAX",
+    title: "Business Intelligence",
     icon: BarChart3,
-    topics: [
-      "Interactive dashboard design",
-      "DAX measures for complex KPIs and business requirements",
-      "Data visualization for pricing and regional trends",
-      "Department-wise performance monitoring dashboards",
-      "KPI trackers and management reporting views"
+    summary: "Dashboards that make performance, trends, and gaps visible.",
+    skills: [
+      {
+        name: "Power BI",
+        topics: [
+          "Interactive dashboard design",
+          "Data visualization for pricing and regional trends",
+          "Department-wise performance monitoring dashboards"
+        ]
+      },
+      {
+        name: "DAX Basics",
+        topics: [
+          "DAX measures for complex KPIs and business requirements",
+          "Calculated columns and measures"
+        ]
+      },
+      {
+        name: "KPI Dashboards",
+        topics: [
+          "KPI trackers and management reporting views",
+          "Sales, procurement, and inventory KPI tracking"
+        ]
+      },
+      {
+        name: "Reporting",
+        topics: [
+          "Daily, weekly, monthly, quarterly, and annual reports",
+          "Sales performance and operational efficiency reporting"
+        ]
+      },
+      {
+        name: "Data Storytelling",
+        topics: [
+          "Turning raw metrics into decision-ready narratives",
+          "Business documentation and presentation decks"
+        ]
+      }
     ]
   },
   {
-    tool: "Exploratory Data Analysis (EDA)",
-    icon: LineChart,
-    topics: [
-      "Identifying trends, patterns, and business insights",
-      "Data cleaning and feature engineering",
-      "Data visualization for pattern discovery",
-      "Time-series analysis"
-    ]
-  },
-  {
-    tool: "ERPNext / CRM",
+    title: "ERP / Business Systems",
     icon: ServerCog,
-    topics: [
-      "Sales, Purchase, CRM, HR, Inventory, and Accounts modules",
-      "Approval workflows: Quotations, Sales Orders, Purchase Orders, Leave Applications",
-      "Custom reports and print formats",
-      "Daily, weekly, monthly, quarterly, and annual management reporting"
+    summary: "Operational workflows, ERP reports, and process monitoring.",
+    skills: [
+      {
+        name: "ERPNext",
+        topics: [
+          "Sales, Purchase, CRM, HR, Inventory, and Accounts modules",
+          "Custom reports and print formats"
+        ]
+      },
+      {
+        name: "CRM",
+        topics: [
+          "Lead to Quotation to Sales Order tracking",
+          "Customer and pipeline management workflows"
+        ]
+      },
+      {
+        name: "Workflow Management",
+        topics: [
+          "Approval workflows: Quotations, Sales Orders, Purchase Orders, Leave Applications"
+        ]
+      },
+      {
+        name: "Business Process Monitoring",
+        topics: [
+          "Planner compliance tracking",
+          "Operational efficiency monitoring across departments"
+        ]
+      },
+      {
+        name: "Reports",
+        topics: [
+          "Daily, weekly, monthly, quarterly, and annual management reporting"
+        ]
+      }
     ]
   },
   {
-    tool: "Machine Learning",
-    icon: GraduationCap,
-    topics: [
-      "Regression models for forecasting",
-      "Feature engineering and model-readiness thinking",
-      "Time-series based prediction",
-      "Evaluating trends for decision support"
+    title: "Machine Learning",
+    icon: BrainCircuit,
+    summary: "Foundational ML workflows for prediction and evaluation.",
+    skills: [
+      {
+        name: "Scikit-learn",
+        topics: ["Building and training regression models"]
+      },
+      {
+        name: "Regression Models",
+        topics: [
+          "Regression models for forecasting",
+          "Time-series based prediction"
+        ]
+      },
+      {
+        name: "Feature Engineering",
+        topics: [
+          "Feature engineering and model-readiness thinking",
+          "Preparing raw data for modeling"
+        ]
+      },
+      {
+        name: "Model Evaluation",
+        topics: ["Evaluating trends for decision support"]
+      }
+    ]
+  },
+  {
+    title: "Tools",
+    icon: FileSpreadsheet,
+    summary: "Analysis notebooks, charting, database, and live update tools.",
+    skills: [
+      {
+        name: "Jupyter Notebook",
+        topics: ["Interactive analysis and documentation of workflows"]
+      },
+      {
+        name: "Matplotlib",
+        topics: ["Visualizing trends and predictions"]
+      },
+      {
+        name: "Microsoft SQL Server",
+        topics: ["Query writing and data extraction for reporting"]
+      },
+      {
+        name: "OpenCV",
+        topics: [
+          "Real-time detection using adaptive thresholding and median filtering",
+          "Pixel analysis for high-accuracy detection",
+          "Slot annotation tool via OpenCV GUI"
+        ]
+      },
+      {
+        name: "WebSocket",
+        topics: ["Real-time live updates and instant alerts"]
+      }
     ]
   }
 ];
-
 export type ExperienceItem = {
   title: string;
   company: string;
@@ -170,8 +289,7 @@ export const navItems = [
   { label: "Projects", href: "#projects" },
   { label: "Education", href: "#education" },
   { label: "Certificates", href: "#certifications" },
-  { label: "Contact", href: "#contact" },
-  { label: "Roadmap", href: "#roadmap" },
+  { label: "Contact", href: "#contact" }
 ];
 
 export const heroKpis = [
@@ -197,7 +315,7 @@ export const heroMetrics = [
   { label: "Experience", value: "5 months", detail: "business reporting" }
 ];
 
-export const skillCategories: SkillCategory[] = [
+export const SkillCategory: SkillCategory[] = [
   {
     title: "Data Analysis",
     icon: Database,
