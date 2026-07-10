@@ -101,7 +101,7 @@ export function Hero() {
         >
           <motion.div
             variants={tagReveal}
-            className="mb-6 flex items-center gap-4"
+            className="mb-4 flex items-center gap-3 sm:gap-4"
           >
             <Image
               src="/profile.png"
@@ -109,21 +109,30 @@ export function Hero() {
               width={88}
               height={88}
               priority
-              className="h-20 w-20 shrink-0 rounded-full border-2 border-cyan-glow/60 object-cover shadow-[0_0_28px_rgba(34,211,238,0.35)] sm:h-[88px] sm:w-[88px]"
+              className="h-14 w-14 shrink-0 rounded-full border-2 border-cyan-glow/60 object-cover shadow-[0_0_28px_rgba(34,211,238,0.35)] sm:h-[88px] sm:w-[88px]"
             />
-            <div className="inline-flex max-w-full min-w-0 items-center gap-2 rounded-md border border-white/12 bg-white/8 px-3 py-2 text-sm text-slate-200 backdrop-blur">
-              <MapPin size={16} className="shrink-0 text-teal-signal" />
-              <span className="min-w-0 truncate">
-                {profile.location} | Preferred: Gurugram / Delhi NCR / Pan India
-              </span>
-            </div>
+            <h1 className="whitespace-nowrap text-4xl font-semibold leading-tight text-white sm:text-4xl lg:text-6xl">
+              {profile.name.split("").map((char, index) => (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.8 + index * 0.04, duration: 0.05 }}
+                >
+                  {char === " " ? "\u00A0" : char}
+                </motion.span>
+              ))}
+            </h1>
           </motion.div>
-          <h1 className="text-4xl font-semibold leading-tight text-white sm:text-6xl lg:text-7xl">
-            {profile.name}
-          </h1>
-          <p className="mt-4 max-w-full text-xl font-medium leading-8 text-cyan-glow sm:text-2xl">
+          <p className="max-w-full text-xl font-medium leading-8 text-cyan-glow sm:text-2xl">
             {profile.headline}
           </p>
+          <div className="mt-6 inline-flex max-w-full min-w-0 items-center gap-2 rounded-md border border-white/12 bg-white/8 px-3 py-2 text-sm text-slate-200 backdrop-blur">
+            <MapPin size={16} className="shrink-0 text-teal-signal" />
+            <span className="min-w-0 truncate">
+              {profile.location} | Preferred: Gurugram / Delhi NCR / Pan India
+            </span>
+          </div>
           <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200 sm:text-lg">
             {profile.subheadline}
           </p>
