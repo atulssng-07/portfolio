@@ -21,6 +21,99 @@ export type SkillCategory = {
   skills: string[];
 };
 
+
+//Learning Roadmap
+export type RoadmapTopic = {
+  tool: string;
+  icon: LucideIcon;
+  topics: string[];
+};
+export const learningRoadmap: RoadmapTopic[] = [
+  {
+    tool: "SQL",
+    icon: Database,
+    topics: [
+      "SQL basics and query structure",
+      "Data life cycle and collection methods",
+      "SELECT, WHERE, ORDER BY, GROUP BY",
+      "Joins and aggregations",
+      "Microsoft SQL Server fundamentals",
+      "Writing queries for data extraction and reporting"
+    ]
+  },
+  {
+    tool: "Excel",
+    icon: FileSpreadsheet,
+    topics: [
+      "Data cleaning and organizing",
+      "Formulas and functions for analysis",
+      "Reporting and summary tables",
+      "Data validation and structuring for analysis"
+    ]
+  },
+  {
+    tool: "Python",
+    icon: BrainCircuit,
+    topics: [
+      "Core Python: variables, loops, functions",
+      "Scripting and automation basics",
+      "Data cleaning and transformation",
+      "Feature engineering for analysis and ML"
+    ]
+  },
+  {
+    tool: "Pandas & NumPy",
+    icon: Database,
+    topics: [
+      "Data extraction and transformation",
+      "Cleaning and structuring raw datasets",
+      "GroupBy operations and aggregations",
+      "Working with real-world messy data (Airbnb, stock market datasets)"
+    ]
+  },
+  {
+    tool: "Power BI & DAX",
+    icon: BarChart3,
+    topics: [
+      "Interactive dashboard design",
+      "DAX measures for complex KPIs and business requirements",
+      "Data visualization for pricing and regional trends",
+      "Department-wise performance monitoring dashboards",
+      "KPI trackers and management reporting views"
+    ]
+  },
+  {
+    tool: "Exploratory Data Analysis (EDA)",
+    icon: LineChart,
+    topics: [
+      "Identifying trends, patterns, and business insights",
+      "Data cleaning and feature engineering",
+      "Data visualization for pattern discovery",
+      "Time-series analysis"
+    ]
+  },
+  {
+    tool: "ERPNext / CRM",
+    icon: ServerCog,
+    topics: [
+      "Sales, Purchase, CRM, HR, Inventory, and Accounts modules",
+      "Approval workflows: Quotations, Sales Orders, Purchase Orders, Leave Applications",
+      "Custom reports and print formats",
+      "Daily, weekly, monthly, quarterly, and annual management reporting"
+    ]
+  },
+  {
+    tool: "Machine Learning",
+    icon: GraduationCap,
+    topics: [
+      "Regression models for forecasting",
+      "Feature engineering and model-readiness thinking",
+      "Time-series based prediction",
+      "Evaluating trends for decision support"
+    ]
+  }
+];
+
 export type ExperienceItem = {
   title: string;
   company: string;
@@ -77,7 +170,8 @@ export const navItems = [
   { label: "Projects", href: "#projects" },
   { label: "Education", href: "#education" },
   { label: "Certificates", href: "#certifications" },
-  { label: "Contact", href: "#contact" }
+  { label: "Contact", href: "#contact" },
+  { label: "Roadmap", href: "#roadmap" },
 ];
 
 export const heroKpis = [
