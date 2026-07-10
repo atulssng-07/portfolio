@@ -47,7 +47,6 @@ export function Skills() {
               </div>
 
               <div className="relative">
-                {/* Connecting thread linking all skills in this card */}
                 <div className="absolute bottom-3 left-[9px] top-3 w-px overflow-hidden bg-slate-200">
                   <motion.div
                     initial={{ y: "-100%" }}
@@ -65,7 +64,6 @@ export function Skills() {
 
                     return (
                       <div key={key} className="relative pl-6">
-                        {/* Node on the thread */}
                         <span className="absolute left-0 top-[13px] h-[9px] w-[9px] shrink-0 -translate-x-[3.5px] rounded-full border-2 border-teal-signal bg-white" />
 
                         <div className="overflow-hidden rounded-md border border-slate-200 bg-slate-50">

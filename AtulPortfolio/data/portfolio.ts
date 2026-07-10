@@ -314,63 +314,6 @@ export const heroMetrics = [
   { label: "ERPNext", value: "Ops Data", detail: "CRM, inventory, accounts" },
   { label: "Experience", value: "5 months", detail: "business reporting" }
 ];
-
-export const SkillCategory: SkillCategory[] = [
-  {
-    title: "Data Analysis",
-    icon: Database,
-    summary: "Raw data handling, exploratory analysis, and reporting logic.",
-    skills: ["SQL", "Excel", "Python", "Pandas", "NumPy", "EDA", "Data Cleaning"]
-  },
-  {
-    title: "Business Intelligence",
-    icon: BarChart3,
-    summary: "Dashboards that make performance, trends, and gaps visible.",
-    skills: [
-      "Power BI",
-      "DAX Basics",
-      "KPI Dashboards",
-      "Reporting",
-      "Data Storytelling"
-    ]
-  },
-  {
-    title: "ERP / Business Systems",
-    icon: ServerCog,
-    summary: "Operational workflows, ERP reports, and process monitoring.",
-    skills: [
-      "ERPNext",
-      "CRM",
-      "Workflow Management",
-      "Business Process Monitoring",
-      "Reports"
-    ]
-  },
-  {
-    title: "Machine Learning",
-    icon: BrainCircuit,
-    summary: "Foundational ML workflows for prediction and evaluation.",
-    skills: [
-      "Scikit-learn",
-      "Regression Models",
-      "Feature Engineering",
-      "Model Evaluation"
-    ]
-  },
-  {
-    title: "Tools",
-    icon: FileSpreadsheet,
-    summary: "Analysis notebooks, charting, database, and live update tools.",
-    skills: [
-      "Jupyter Notebook",
-      "Matplotlib",
-      "Microsoft SQL Server",
-      "OpenCV",
-      "WebSocket"
-    ]
-  }
-];
-
 export const experiences: ExperienceItem[] = [
   {
     title: "ERP & CRM Executive",
