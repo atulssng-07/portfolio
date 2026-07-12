@@ -33,26 +33,6 @@ export const skillCategories: SkillCategory[] = [
     summary: "Raw data handling, exploratory analysis, and reporting logic.",
     skills: [
       {
-        name: "SQL",
-        topics: [
-          "SQL basics and query structure",
-          "Data life cycle and collection methods",
-          "SELECT, WHERE, ORDER BY, GROUP BY",
-          "Joins and aggregations",
-          "Microsoft SQL Server fundamentals",
-          "Writing queries for data extraction and reporting"
-        ]
-      },
-      {
-        name: "Excel",
-        topics: [
-          "Data cleaning and organizing",
-          "Formulas and functions for analysis",
-          "Reporting and summary tables",
-          "Data validation and structuring for analysis"
-        ]
-      },
-      {
         name: "Python",
         topics: [
           "Core Python: variables, loops, functions",
@@ -86,7 +66,29 @@ export const skillCategories: SkillCategory[] = [
           "Standardizing formats across sources",
           "Ensuring accuracy and consistency for reporting"
         ]
-      }
+      },
+      {
+        name: "SQL",
+        topics: [
+          "SQL basics and query structure",
+          "Data life cycle and collection methods",
+          "SELECT, WHERE, ORDER BY, GROUP BY",
+          "Master Table Creation",
+          "Joins and aggregations",
+          "Microsoft SQL Server fundamentals",
+          "Writing queries for data extraction and reporting"
+        ]
+      },
+      {
+        name: "Excel",
+        topics: [
+          "Data cleaning and organizing",
+          "Formulas and functions for analysis",
+          "Reporting and summary tables",
+          "Data validation and structuring for analysis"
+        ]
+      },
+      
     ]
   },
   {
@@ -308,8 +310,8 @@ export const heroKpis = [
 ];
 
 export const heroMetrics = [
-  { label: "SQL", value: "Querying", detail: "joins, reports, analysis" },
   { label: "Python", value: "Analytics", detail: "Pandas, NumPy, EDA" },
+  { label: "SQL", value: "Querying", detail: "joins, reports, analysis" },
   { label: "Power BI", value: "Dashboards", detail: "KPIs and reporting" },
   { label: "ERPNext", value: "Ops Data", detail: "CRM, inventory, accounts" },
   { label: "Experience", value: "5 months", detail: "business reporting" }
