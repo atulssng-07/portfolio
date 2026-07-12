@@ -36,7 +36,7 @@ export const skillCategories: SkillCategory[] = [
         name: "Python",
         topics: [
           "Core Python: variables, loops, functions",
-          "Scripting and automation basics",
+          "Writting Python scripts to automate document auto-submission workflows in ERPNext",
           "Data cleaning and transformation",
           "Feature engineering for analysis and ML"
         ]
@@ -76,7 +76,7 @@ export const skillCategories: SkillCategory[] = [
           "Master Table Creation",
           "Joins and aggregations",
           "Microsoft SQL Server fundamentals",
-          "Writing queries for data extraction and reporting"
+          "Writing queries for data extraction and reporting in ERPNext"
         ]
       },
       {
