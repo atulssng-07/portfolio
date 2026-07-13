@@ -68,6 +68,15 @@ export const skillCategories: SkillCategory[] = [
         ]
       },
       {
+        name: "REST API & Data Integration",
+        topics: [
+          "Token-based API authentication with custom HTTP headers",
+          "Querying REST endpoints with field selection and pagination",
+          "Diagnosing 403 errors, malformed headers, and schema mismatches",
+          "ETL pipeline design: raw API JSON to analysis-ready relational tables"
+        ]
+      },
+      {
         name: "SQL",
         topics: [
           "SQL basics and query structure",
@@ -101,15 +110,22 @@ export const skillCategories: SkillCategory[] = [
         topics: [
           "Interactive dashboard design",
           "Data visualization for pricing and regional trends",
-          "Department-wise performance monitoring dashboards"
-        ]
+          "Department-wise performance monitoring dashboards",
+          "Built live pipeline dashboard connecting ERPNext CRM data via REST API",
+          "Power Query (M language) for JSON flattening and data transformation",
+          "Resolved parent-child table relationships and dynamic link fields via merges",
+          "Conditional formatting for status-based row highlighting",
+          "Date and user slicers for self-service filtering"
+  ]
       },
       {
         name: "DAX Basics",
         topics: [
           "DAX measures for complex KPIs and business requirements",
-          "Calculated columns and measures"
-        ]
+          "Calculated columns and measures",
+          "CALCULATE and COUNTROWS for filter-aware KPI cards",
+          "Context-aware measures for per-owner performance breakdowns"
+  ]
       },
       {
         name: "KPI Dashboards",
@@ -143,8 +159,10 @@ export const skillCategories: SkillCategory[] = [
         name: "ERPNext",
         topics: [
           "Sales, Purchase, CRM, HR, Inventory, and Accounts modules",
-          "Custom reports and print formats"
-        ]
+          "Custom reports and print formats",
+          "REST API integration with token-based authentication (API Key/Secret)",
+          "Troubleshot API permission errors and child-table query limitations"
+  ]
       },
       {
         name: "CRM",
