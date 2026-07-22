@@ -472,6 +472,15 @@ export const certifications: Certification[] = [
     certificateImage: "/certificates/sql_ceritificate.jpg",
     certificateUrl: "https://drive.google.com/file/d/1ZVhZq3pE9O1NM9GvBCa-APQvJB824F94/view?usp=sharing"
   },
+  {
+    title: "Business Data Analysis: The Strategic Thinking Masterclass",
+    issuer: "Udemy",
+    date: "September 2025",
+    outcome:
+      "Developed strategic thinking skills for framing business problems and applying data analysis to support decision-making.",
+    certificateImage: "/certificates/udemy-business-data-analysis.jpg",
+    certificateUrl: "https://ude.my/UC-9d78cc44-6689-4581-8309-154128f8f7a1"
+  }
 
 ];
 
